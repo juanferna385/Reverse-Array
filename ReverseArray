@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Transpose {
+
+  static int[] reverseArray(int[] a) {
+          int[] result = new int[a.length];
+
+          for(int i = 0, j = a.length - 1; i < a.length; i++, j--){
+              result[i] = a[j];
+          }
+
+          return result;
+      }
+      
+      
+      private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args){
+      int arrCount = scanner.nextInt();
+
+      int[] arr = new int[arrCount];
+      String[] arrItems = scanner.nextLine().split(" ");
+      
+      for (int i = 0; i < arrCount; i++) {
+            int arrItem = Integer.parseInt(arrItems[i]);
+            arr[i] = arrItem;
+        }
+
+        System.out.println(reverseArray(arr));
+    
+    
+    }
+}
